@@ -1,0 +1,4 @@
+class Blog < ApplicationRecord
+  validates :title, :content, presence: { message: "入力がありません" } 
+  validates :title, :content, length: { in: 1..140, message: "1~140字以内で入力して下さい" }
+end
